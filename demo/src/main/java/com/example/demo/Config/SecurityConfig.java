@@ -16,9 +16,7 @@ public class SecurityConfig {
                 .requestMatchers("/api/**").permitAll() // Public access to APIs
                 .anyRequest().authenticated() // Secure other requests
             )
-            .formLogin(form -> form
-                .loginPage("/login").permitAll() // Custom login page
-            )
+            .formLogin(withDefaults()) // Use default login page
             .logout(logout -> logout
                 .logoutSuccessUrl("/login?logout").permitAll() // Redirect after logout
             );
