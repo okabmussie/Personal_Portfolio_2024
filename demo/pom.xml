@@ -27,8 +27,8 @@
     <!-- Add the MySQL Repository -->
     <repositories>
         <repository>
-            <id>mysql-repo</id>
-            <url>https://repo.mysql.com/maven/</url>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
 
@@ -82,15 +82,15 @@
         <!-- MySQL Connector (Stable Version) -->
         <dependency>
             <groupId>mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.28</version> <!-- Updated to a more stable version -->
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version> <!-- Updated to a stable version -->
         </dependency>
 
         <!-- Spring Context -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.3.22</version> <!-- Explicit version for Spring Context -->
+            <version>5.3.10</version> <!-- Explicit version for Spring Context -->
         </dependency>
 
         <!-- Other dependencies -->
@@ -137,4 +137,21 @@
         </plugins>
     </build>
 
+
+
+    <dependencyManagement>
+    
+
+        <dependencies>
+        
+
+            <dependency>
+                <groupId>org.hibernate.orm</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>6.6.4.Final</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
 </project>
